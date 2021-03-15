@@ -4,9 +4,9 @@ public class Produto
 {
 	private int codigo;
 	private String nome;
-	private String preco;
+	private double preco;
 	
-	public Produto(int codigo, String nome, String preco) 
+	public Produto(int codigo, String nome, double preco) 
 	{
 		super();
 		this.codigo = codigo;
@@ -24,7 +24,7 @@ public class Produto
 		return this.nome;
 	}
 
-	public String getPreco() 
+	public double getPreco() 
 	{
 		return this.preco;
 	}
