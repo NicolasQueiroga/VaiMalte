@@ -19,9 +19,10 @@ public class Carrinho
 	
 	public void atualizaCarrinho(Produto produto)
 	{
-		if (pedidos.contains(produto))
+		Pedido existente = pedidos.stream().filter((p) -> p.getProduto().getCodigo() == produto.getCodigo()).findFirst().orElse(null);
+		if (existente != null)
 		{
-			produto.incrementaUm();
+			existente.incrementaUm();
 		}
 		else
 		{
