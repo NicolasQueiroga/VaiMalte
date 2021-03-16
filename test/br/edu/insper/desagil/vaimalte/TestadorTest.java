@@ -2,8 +2,6 @@ package br.edu.insper.desagil.vaimalte;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import java.util.*;
-
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -22,10 +20,6 @@ class TestadorTest
 	public void testeA() 
 	{
 	    assertTrue(t.testeA());
-	    
-	    List<Pedido> pedidos = new ArrayList<>();
-	    Carrinho carrinho = new Carrinho();
-	    assertEquals(pedidos, carrinho.getPedidos());
 	}
 
 	@Test
