@@ -24,9 +24,20 @@ public class Caixa
 	public double calculaTotal(Carrinho carrinho)
 	{
 		double total = 0;
+		int codigo;
+		double desconto;
 		for (Pedido item : carrinho.getPedidos())
 		{
-			total += item.calculaPedido();
+			codigo = item.getProduto().getCodigo();
+			if (descontos.containsKey(codigo))
+			{
+				desconto = descontos.get(codigo);
+				total += item.calculaPedido()*(1 - desconto/100);
+			}
+			else
+			{
+				total += item.calculaPedido();
+			}
 		}
 		return total;
 	}
