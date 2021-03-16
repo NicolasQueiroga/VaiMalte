@@ -12,29 +12,22 @@ public class Testador
 		Caixa caixaTesteA = new Caixa();
 		total = caixaTesteA.calculaTotal(carrinhoTesteA);
 		expected = 0;
-		if (total == expected)
-		{
-			return true;
-		}
-		else
-		{
-			return false;
-		}
+		return (total == expected);
 	}
 
 	public boolean testeB() 
 	{
-		return true;
+		return (total == expected);
 	}
 
 	public boolean testeC() 
 	{
-		return true;
+		return (total == expected);
 	}
 
 	public boolean testeD() 
 	{
-	    return true;
+	    return (total == expected);
 	}
 
 	public boolean testeE() 
@@ -49,14 +42,7 @@ public class Testador
 		caixaTesteE.adicionaDisconto(produto2TesteE, 12);
 		total = caixaTesteE.calculaTotal(carrinhoTesteE);
 		expected = 3.26 + 2*20.88*(1 - 0.12);
-		if (total == expected)
-		{
-			return true;
-		}
-		else
-		{
-			return false;
-		}
+		return (total == expected);
 	}
 	
 }
