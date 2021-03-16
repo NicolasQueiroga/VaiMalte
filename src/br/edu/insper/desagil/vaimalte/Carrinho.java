@@ -5,31 +5,38 @@ import java.util.*;
 public class Carrinho 
 {
 	
-	private List<Pedido> pedidos;
+	private List<Pedido> carrinho;
 
 	public Carrinho() 
 	{
 		super();
-		this.pedidos = new ArrayList<>();
+		this.carrinho = new ArrayList<>();
 	}
 
 	public List<Pedido> getPedidos() 
 	{
-		return this.pedidos;
+		return this.carrinho;
 	}
 	
 	public void atualizaCarrinho(Produto produto)
 	{
-		Pedido existente = pedidos.stream().filter((p) -> p.getProduto().getCodigo() == produto.getCodigo()).findFirst().orElse(null);
-		if (existente != null)
+		boolean existe = false;
+		for (Pedido item : carrinho)
 		{
-			existente.incrementaUm();
+			if (item.getProduto().getCodigo() == produto.getCodigo())
+			{
+				item.incrementaUm();
+				existe = true;
+				break;
+			}
 		}
-		else
+		if (!existe)
 		{
 			Pedido newPedido = new Pedido(produto);
-			pedidos.add(newPedido);
+			carrinho.add(newPedido);
 		}
+		
+	
 	}
 	
 }
