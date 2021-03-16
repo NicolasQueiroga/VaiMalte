@@ -17,7 +17,7 @@ public class Caixa
 	{
 		if ((desconto >= 1) && (desconto <= 99))
 		{
-			descontos.put(produto.getCodigo(), desconto);
+			this.descontos.put(produto.getCodigo(), desconto);
 		}
 	}
 	

@@ -4,6 +4,7 @@ import java.util.*;
 
 public class Carrinho 
 {
+	
 	private List<Pedido> pedidos;
 
 	public Carrinho() 
@@ -14,7 +15,7 @@ public class Carrinho
 
 	public List<Pedido> getPedidos() 
 	{
-		return pedidos;
+		return this.pedidos;
 	}
 	
 	public void atualizaCarrinho(Produto produto)
