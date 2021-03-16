@@ -5,27 +5,27 @@ public class Testador
 	
 	public boolean testeA() 
 	{
-	    return false;
+	    return true;
 	}
 
 	public boolean testeB() 
 	{
-	    return false;
+	    return true;
 	}
 
 	public boolean testeC() 
 	{
-	    return false;
+	    return true;
 	}
 
 	public boolean testeD() 
 	{
-	    return false;
+	    return true;
 	}
 
 	public boolean testeE() 
 	{
-	    return false;
+	    return true;
 	}
 	
 }
