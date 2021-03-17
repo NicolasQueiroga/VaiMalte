@@ -41,8 +41,15 @@ public class Testador
 	public boolean testeD() 
 	{
 		Carrinho carrinhoTesteD = new Carrinho();
-		total = 0;
-		expected = 0;
+		Produto produto1TesteD = new Produto(1011, "Laranja", 2.05);
+		Produto produto2TesteD = new Produto(1101, "Morango", 10.6);
+		carrinhoTesteD.atualizaCarrinho(produto1TesteD);
+		carrinhoTesteD.atualizaCarrinho(produto1TesteD);
+		carrinhoTesteD.atualizaCarrinho(produto2TesteD);
+		Caixa caixaTesteE = new Caixa();
+		caixaTesteE.adicionaDisconto(produto2TesteD, 20);
+		total = caixaTesteE.calculaTotal(carrinhoTesteD);
+		expected = 2*2.05+10.6*(1-0.2);
 		return (total == expected);
 	}
 
