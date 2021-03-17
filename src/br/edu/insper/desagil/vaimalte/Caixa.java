@@ -15,7 +15,7 @@ public class Caixa
 	
 	public void adicionaDisconto(Produto produto, int desconto) 
 	{
-		if ((desconto >= 1) && (desconto <= 99))
+		if ((desconto > 0) && (desconto < 100))
 		{
 			this.descontos.put(produto.getCodigo(), desconto);
 		}
