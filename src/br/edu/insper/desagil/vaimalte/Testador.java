@@ -24,17 +24,50 @@ public class Testador
 
 	public boolean testeB() 
 	{
-		return true;
+		Carrinho carrinhoTesteB = new Carrinho();
+		Produto produto1TesteB = new Produto(0001, "Manga", 5.63);
+		carrinhoTesteB.atualizaCarrinho(produto1TesteB);
+		Caixa caixaTesteB = new Caixa();
+		total = caixaTesteB.calculaTotal(carrinhoTesteB);
+		expected = 5.63;
+		if (total == expected)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
 	}
 
 	public boolean testeC() 
 	{
-		return true;
+		Carrinho carrinhoTesteC = new Carrinho();
+		total = 0;
+		expected = 0;
+		if (total == expected)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
 	}
 
 	public boolean testeD() 
 	{
-	    return true;
+		Carrinho carrinhoTesteD = new Carrinho();
+		total = 0;
+		expected = 0;
+		if (total == expected)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
 	}
 
 	public boolean testeE() 
