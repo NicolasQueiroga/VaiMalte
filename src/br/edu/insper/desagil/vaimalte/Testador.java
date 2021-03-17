@@ -3,8 +3,8 @@ package br.edu.insper.desagil.vaimalte;
 public class Testador 
 {
 	
-	double total;
-	double expected;
+	private double total;
+	private double expected;
 	
 	public boolean testeA() 
 	{

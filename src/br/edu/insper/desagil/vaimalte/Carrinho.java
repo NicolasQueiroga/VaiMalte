@@ -20,23 +20,16 @@ public class Carrinho
 	
 	public void atualizaCarrinho(Produto produto)
 	{
-		boolean existe = false;
-		for (Pedido item : carrinho)
+		for (Pedido pedidos : carrinho)
 		{
-			if (item.getProduto().getCodigo() == produto.getCodigo())
+			if (pedidos.getProduto().getCodigo() == produto.getCodigo())
 			{
-				item.incrementaUm();
-				existe = true;
-				break;
+				pedidos.incrementaUm();
+				return ;
 			}
 		}
-		if (!existe)
-		{
-			Pedido newPedido = new Pedido(produto);
-			carrinho.add(newPedido);
-		}
-		
-	
+		Pedido newPedido = new Pedido(produto);
+		carrinho.add(newPedido);
 	}
 	
 }
