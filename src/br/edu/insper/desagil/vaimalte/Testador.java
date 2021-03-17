@@ -17,17 +17,29 @@ public class Testador
 
 	public boolean testeB() 
 	{
+		Carrinho carrinhoTesteB = new Carrinho();
+		Produto produto1TesteB = new Produto(0001, "Manga", 5.63);
+		carrinhoTesteB.atualizaCarrinho(produto1TesteB);
+		Caixa caixaTesteB = new Caixa();
+		total = caixaTesteB.calculaTotal(carrinhoTesteB);
+		expected = 5.63;
 		return (total == expected);
 	}
 
 	public boolean testeC() 
 	{
+		Carrinho carrinhoTesteC = new Carrinho();
+		total = 0;
+		expected = 0;
 		return (total == expected);
 	}
 
 	public boolean testeD() 
 	{
-	    return (total == expected);
+		Carrinho carrinhoTesteD = new Carrinho();
+		total = 0;
+		expected = 0;
+		return (total == expected);
 	}
 
 	public boolean testeE() 
