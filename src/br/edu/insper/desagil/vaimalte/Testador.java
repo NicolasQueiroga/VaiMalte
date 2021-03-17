@@ -29,8 +29,12 @@ public class Testador
 	public boolean testeC() 
 	{
 		Carrinho carrinhoTesteC = new Carrinho();
-		total = 0;
-		expected = 0;
+		Produto produto1TesteC = new Produto(0010, "Abacaxi", 7.07);
+		carrinhoTesteC.atualizaCarrinho(produto1TesteC);
+		Caixa caixaTesteC = new Caixa();
+		caixaTesteC.adicionaDisconto(produto1TesteC, 15);
+		total = caixaTesteC.calculaTotal(carrinhoTesteC);
+		expected = 7.07*(1-0.15);
 		return (total == expected);
 	}
 
